@@ -15,6 +15,9 @@ class CreatePesanansTable extends Migration
     {
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->date('tanggal_pesanan');
+            $table->integer('jumlah_harga');
             $table->timestamps();
         });
     }
